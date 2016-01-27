@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+body, html {
+  height: 100%;
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 17px;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  background: white;
+  color: #595959; }
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.left {
+  height: 100%;
+  background: #5fdd9d; }
+
+.right {
+  height: 100%;
+  margin: auto; }
+  .right .table {
+    display: table;
+    height: 100%;
+    width: 500px;
+    margin: auto; }
+    @media only screen and (max-width: 1023px) {
+      .right .table {
+        width: 90%; } }
+  .right .cell {
+    display: table-cell;
+    vertical-align: middle; }
+  .right p {
+    margin-bottom: 15px; }
+  .right input {
+    background-color: #f1f1f1;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding: 25px 25px;
+    font-size: 17px;
+    color: #222222; }
+  .right input:focus {
+    border-color: #5fdd9d; }
+
+.btn-subscribe {
+  background-color: #ee6352;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 12px;
+  height: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  display: block;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  margin-top: 30px; }
+
+.btn-subscribe:hover {
+  background-color: #d85a4a; }
+
+.simplebox {
+  outline: none;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important; }
+
+.tags .tag {
+  border: 2px solid #6884BF;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 7px 13px;
+  color: #48639c;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-bottom: 18px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+.tags .tag:hover {
+  background-color: #48639c;
+  border: 2px solid #48639c;
+  color: white; }
+
+.stats {
+  color: #b1b1b1;
+  font-size: 15px;
+  margin-top: 15px;
+  display: block;
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */

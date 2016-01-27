@@ -1,0 +1,121 @@
+@import "colors";
+@import "mixins";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+
+body,html{
+	height: 100%;
+	font-family: "Source Sans Pro";
+	font-weight: 400;
+	font-size: 17px;
+	background-color: white;
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+	background: white;
+	color: $dark;
+}
+
+.container-fluid{
+	padding-left: 0px; 
+	padding-right: 0px;
+}
+
+.left{
+	height: 100%;
+	background: $green;
+}
+
+.right{
+	height: 100%;
+	//padding: 90px;
+	margin:auto;
+	
+
+	.table{
+		display: table;
+		height: 100%;
+		width: 500px;
+		margin: auto;
+		@include respond-to(handhelds-and-medium){
+			width: 90%;
+		}
+	}
+
+	.cell{
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	p{
+		margin-bottom: 15px;
+	}
+
+	input{
+		background-color: #f1f1f1;
+		border: 1px solid #e1e1e1;
+		border-radius: 3px;
+		margin-bottom: 20px;
+		padding: 25px 25px;
+		font-size: 17px;
+		color: #222222;
+	}
+
+	input:focus{
+		border-color: $green;
+	}
+}
+
+.btn-subscribe{
+	background-color: #ee6352;
+	color: white;
+	border-radius: 3px;
+	border: none;
+	padding: 12px;
+	height: inherit;
+	font-size: 17px;
+	font-weight: 600;
+	display: block;
+	//width: 70%;
+	@include transition-fade(0.5s);
+	margin-top: 30px;
+}
+
+.btn-subscribe:hover{
+	background-color: $dark-red;
+}
+
+.simplebox {
+	outline: none;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+.tags{
+	.tag{
+		border: 2px solid $light-blue;
+		border-radius: 3px;
+		display: inline-block;
+		padding: 7px 13px;
+		color: $blue;
+		font-size: 15px;
+		font-weight: 600;
+		cursor: pointer;
+		margin-right: 15px;
+		margin-bottom: 18px;
+		@include transition-fade(0.3s);
+	}
+
+	.tag:hover{
+		background-color: $blue;
+		border: 2px solid $blue;
+		color: white;
+	}
+}
+
+.stats{
+	color: $light-gray;
+	font-size: 15px;
+	margin-top: 15px;
+	display: block;
+	text-align: center;
+}

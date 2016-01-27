@@ -1,0 +1,32 @@
+$break-small: 380px; //Handheld devices
+$break-large: 1024px; //Large screens
+$break-super-large: 1400px; //Large screens
+$tablets: 768px;
+
+@mixin respond-to($media) {
+	@if $media == handhelds {
+		@media only screen and (max-width: $break-small) { @content; }
+	}
+	@else if $media == medium-screens {
+		@media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+	}
+	@else if $media == tablets {
+		@media only screen and (min-width: $break-small + 1) and (max-width: $tablets - 1) { @content; }
+	}
+	@else if $media == handhelds-and-medium {
+		@media only screen and (max-width: $break-large - 1) { @content; }
+	}
+	@else if $media == wide-screens {
+		@media only screen and (min-width: $break-large) { @content; }
+	}
+	@else if $media == super-wide-screens {
+		@media only screen and (min-width: $break-super-large) { @content; }
+	}
+}
+
+@mixin transition-fade($time){
+	-moz-transition: all $time ease;
+	-o-transition: all $time ease;
+	-webkit-transition: all $time ease;
+	transition: all $time ease;
+}

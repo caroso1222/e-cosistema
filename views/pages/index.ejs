@@ -1,57 +1,62 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en" ng-app = "newsletter"> 
 <head>
 	<% include ../partials/head %> 
 </head>
-<body class="container-fluid">
-	<div class = "col-sm-6 left"></div>
-	<div class = "col-sm-6 right">
+<body class="container-fluid" ng-controller="mainController">
+	<div class = "col-md-6 left"></div>
+	<div class = "col-md-6 right">
 		<div class = "table">
 			<div class = "cell">
-				<p>No te enviaremos basura. Lo prometemos.</p>
-				<input type = "text" placeholder = "Tu email" class = "simplebox form-control">
-				<p>Selecciona al menos dos temas de tu interés.</p>
-				<div class = "tags">
-					<div class = "tag">
-						Emprendimientos
+				<form action="//blogbotics.us3.list-manage.com/subscribe/post?u=307ead8b12c73c7f83bdac290&amp;id=a8d6cc030c&EMPRENDIMI='Si'" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+					<p>No te enviaremos basura. Lo prometemos.</p>
+					<input type = "text" placeholder = "Tu email" class = "simplebox form-control" name="EMAIL">
+					<p>Selecciona al menos dos temas de tu interés.</p>
+					<div class = "tags">
+						<div class = "tag" ng-click = "clickTag($event)">
+							Emprendimientos
+						</div>
+						<div class = "tag" ng-click = "clickTag($event)">
+							Convocatorias
+						</div>
+						<div class = "tag" ng-click = "clickTag($event)">
+							Aceleradoras
+						</div>
+						<div class = "tag" ng-click = "clickTag($event)">
+							Coworking spaces
+						</div>
+						<div class = "tag" ng-click = "clickTag($event)">
+							Inversionistas
+						</div>
+						<div class = "tag" ng-click = "clickTag($event)">
+							Meetups
+						</div>
+						<div class = "tag" ng-click = "clickTag($event)">
+							Fundaciones
+						</div>
+						<div class = "tag" ng-click = "clickTag($event)">
+							Gobierno
+						</div>
+						<div class = "tag" ng-click = "clickTag($event)">
+							Crowdfundings
+						</div>
+						<div class = "tag" ng-click = "clickTag($event)">
+							Blogs
+						</div>
+						<div class = "tag" ng-click = "clickTag($event)">
+							Centros de innovación
+						</div>
 					</div>
-					<div class = "tag">
-						Convocatorias
-					</div>
-					<div class = "tag">
-						Aceleradoras
-					</div>
-					<div class = "tag">
-						Coworking spaces
-					</div>
-					<div class = "tag">
-						Inversionistas
-					</div>
-					<div class = "tag">
-						Meetups
-					</div>
-					<div class = "tag">
-						Fundaciones
-					</div>
-					<div class = "tag">
-						Gobierno
-					</div>
-					<div class = "tag">
-						Crowdfundings
-					</div>
-					<div class = "tag">
-						Blogs
-					</div>
-					<div class = "tag">
-						Centros de innovación
-					</div>
-				</div>
-				<button class = "btn-subscribe form-control simplebox">Suscribirme</button>
-				<span class = "stats">Únete a otras 503 personas suscritas a nuestra lista</span>
+					<input type = "submit" class = "btn-subscribe form-control simplebox" value = "Suscribirme" name = "subscribe">
+					<span class = "stats">Únete a otras 503 personas suscritas a nuestra lista</span>
+				</form>
 			</div>
-			
+
 		</div>
-		
+
 	</div>
+
+	<% include ../partials/body_footer %> 
 </body> 
 </html>

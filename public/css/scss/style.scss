@@ -49,7 +49,7 @@ body,html{
 		margin-bottom: 15px;
 	}
 
-	input{
+	input[type="text"]{
 		background-color: #f1f1f1;
 		border: 1px solid #e1e1e1;
 		border-radius: 3px;
@@ -59,7 +59,7 @@ body,html{
 		color: #222222;
 	}
 
-	input:focus{
+	input[type="text"]:focus{
 		border-color: $green;
 	}
 }
@@ -105,10 +105,16 @@ body,html{
 		@include transition-fade(0.3s);
 	}
 
-	.tag:hover{
+	.active{
 		background-color: $blue;
 		border: 2px solid $blue;
 		color: white;
+	}
+
+	.tag:not(.active):hover{
+		//background-color: $light-blue;
+		//border: 2px solid $light-blue;
+		//color: white;
 	}
 }
 

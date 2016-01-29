@@ -29,6 +29,24 @@ body,html{
 	//padding: 90px;
 	margin:auto;
 	
+	@include respond-to(handhelds-and-medium){
+		padding-top: 30px;
+		padding-bottom: 30px;
+		height: initial;
+	}
+
+	.input-div{
+		position: relative;
+
+		span{
+			position: absolute;
+			right: 18px;
+			top: 18px;
+			color: $red;
+			opacity: 0;
+			@include transition-fade(0.5s);
+		}
+	}
 
 	.table{
 		display: table;
@@ -37,6 +55,20 @@ body,html{
 		margin: auto;
 		@include respond-to(handhelds-and-medium){
 			width: 90%;
+		}
+	}
+
+	.err-div{
+		background-color: #F5F5F5;
+		padding: 13px 18px;
+		border-radius: 3px;
+		color: #EE6352;
+		font-size: 14px;
+		margin-top: 14px;
+		display: none;
+
+		span.fa{
+			margin-right: 10px;
 		}
 	}
 
@@ -57,6 +89,10 @@ body,html{
 		padding: 25px 25px;
 		font-size: 17px;
 		color: #222222;
+	}
+
+	.invalid{
+		border-color: $red !important;
 	}
 
 	input[type="text"]:focus{
@@ -103,6 +139,12 @@ body,html{
 		margin-right: 15px;
 		margin-bottom: 18px;
 		@include transition-fade(0.3s);
+		@include respond-to(handhelds){
+			font-size: 13px;
+			padding: 5px 11px;	
+			margin-right: 12px;
+			margin-bottom: 15px;
+		};
 	}
 
 	.active{

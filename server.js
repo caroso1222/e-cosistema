@@ -18,6 +18,12 @@ app.get('/', function(req, res) {
     // render the home page and pass in the popular images
     res.render('pages/index');
 });
+
+app.get('/gracias', function(req, res) {
+    // use the instagram package to get popular media
+    // render the home page and pass in the popular images
+    res.render('pages/gracias');
+});
 // start the server on port 8080
 app.listen(15419);
 console.log('App started! Look at http://localhost:15419');

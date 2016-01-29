@@ -8,10 +8,13 @@
 	<div class = "col-md-6 right">
 		<div class = "table">
 			<div class = "cell">
-				<form action="//blogbotics.us3.list-manage.com/subscribe/post?u=307ead8b12c73c7f83bdac290&amp;id=a8d6cc030c&EMPRENDIMI='Si'" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<form action="//blogbotics.us3.list-manage.com/subscribe/post?u=307ead8b12c73c7f83bdac290&amp;id=a8d6cc030c&EMPRENDIMI=Si" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
 					<p>No te enviaremos basura. Lo prometemos.</p>
-					<input type = "text" placeholder = "Tu email" class = "simplebox form-control" name="EMAIL">
+					<div class = "input-div">
+						<input type = "text" placeholder = "Tu email" class = "simplebox form-control" name="EMAIL" id = "email-input">
+						<span class = "fa fa-exclamation-triangle"></span>
+					</div>
 					<p>Selecciona al menos dos temas de tu interés.</p>
 					<div class = "tags">
 						<div class = "tag" ng-click = "clickTag($event)">
@@ -33,6 +36,9 @@
 							Meetups
 						</div>
 						<div class = "tag" ng-click = "clickTag($event)">
+							Blogs
+						</div>
+						<div class = "tag" ng-click = "clickTag($event)">
 							Fundaciones
 						</div>
 						<div class = "tag" ng-click = "clickTag($event)">
@@ -42,11 +48,12 @@
 							Crowdfundings
 						</div>
 						<div class = "tag" ng-click = "clickTag($event)">
-							Blogs
-						</div>
-						<div class = "tag" ng-click = "clickTag($event)">
 							Centros de innovación
 						</div>
+					</div>
+					<div class = "err-div">
+						<span class = "fa fa-exclamation-triangle"></span>
+						<span class = "err-msg">Debes seleccionar al menos dos temas de tu interés</span>
 					</div>
 					<input type = "submit" class = "btn-subscribe form-control simplebox" value = "Suscribirme" name = "subscribe">
 					<span class = "stats">Únete a otras 503 personas suscritas a nuestra lista</span>

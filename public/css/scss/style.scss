@@ -1,6 +1,8 @@
 @import "colors";
 @import "mixins";
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700);
 
 body,html{
 	height: 100%;
@@ -19,15 +21,51 @@ body,html{
 	padding-right: 0px;
 }
 
+h1, h2, h3, h4, h5, h6{
+	//font-family: "Merriweather"; 
+	//font-family: "Poppins"; 
+
+}
+
 .left{
-	height: 100%;
+	width: 100%;
 	background: $green;
+	display: table;
+	text-align: center;
+	color: white;
+
+	.hero{
+		display: table-cell;
+		vertical-align: middle;
+		padding: 35px;
+		h1{
+			font-size: 33px;
+			line-height: 1.4em;
+			margin-bottom: 15px;
+			font-weight: 400;
+			@include respond-to(handhelds){
+				font-size: 25px;
+			}
+		}
+
+		h4{
+			font-size: 19px;
+			opacity: 0.85;
+			padding-bottom: 10px;
+			@include respond-to(handhelds){
+				font-size: 16px;
+				line-height: 25px;
+			}
+		}
+	}
+
 }
 
 .right{
-	height: 100%;
 	//padding: 90px;
 	margin:auto;
+	padding-top: 60px;
+	padding-bottom: 60px;
 	
 	@include respond-to(handhelds-and-medium){
 		padding-top: 30px;
@@ -49,8 +87,6 @@ body,html{
 	}
 
 	.table{
-		display: table;
-		height: 100%;
 		width: 500px;
 		margin: auto;
 		@include respond-to(handhelds-and-medium){
@@ -72,13 +108,12 @@ body,html{
 		}
 	}
 
-	.cell{
-		display: table-cell;
-		vertical-align: middle;
-	}
 
 	p{
 		margin-bottom: 15px;
+		@include respond-to(handhelds){
+				font-size: 15px;
+			}
 	}
 
 	input[type="text"]{
@@ -166,4 +201,43 @@ body,html{
 	margin-top: 15px;
 	display: block;
 	text-align: center;
+}
+
+
+//GRACIAS PAGE
+.thanks{
+	display: table;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	.content{
+		display: table-cell;
+		vertical-align: middle;
+		padding: 20px;
+		h2{
+			color: $green;
+			font-weight: 700;
+			font-size: 48px;
+			margin-bottom: 60px;
+		}
+		h3{
+			font-size: 22px;
+			color: #666666;
+			margin-bottom: -10px;
+			font-weight: 400;
+
+			@include respond-to(handhelds){
+				font-size: 18px;
+				line-height: 28px;
+			}
+		}
+		a{
+			margin-top: 90px;
+			display: block;
+			text-decoration: underline;
+			color: $dark;
+			font-size: 14px;
+			font-weight: 600;
+		}
+	}
 }

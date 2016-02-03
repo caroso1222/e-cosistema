@@ -12,61 +12,44 @@
 	</div>
 	<div class = "right">
 		<div class = "table">
-				<form action="//blogbotics.us3.list-manage.com/subscribe/post?u=307ead8b12c73c7f83bdac290&amp;id=a8d6cc030c&EMPRENDIMI=Si" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-
-					<p>No te enviaremos basura. Lo prometemos.</p>
-					<div class = "input-div">
-						<input type = "text" placeholder = "Tu email" class = "simplebox form-control" name="EMAIL" id = "email-input">
-						<span class = "fa fa-exclamation-triangle"></span>
+			<form action="//paramolabs.us2.list-manage1.com/subscribe?u=90fc1ff079c073e775d40165c&id=635523ecb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<div class = "natural-form">
+					<p>Me llamo</p> <input type = "text" placeholder = "Michael Jordan" class = "simplebox form-control" name="NAME" id = "name-input"><p>. Actualmente me desempeño como </p>
+						<select>
+							<option value="Founder">Founder</option>
+							<option value="Developer">Developer</option>
+							<option value="Designer">Designer</option>
+							<option value="Growth Hacker">Growth Hacker</option>
+							<option value="Content Creator">Content Creator</option>
+							<option value="Student">Student</option>
+							<option value="Investor">Investor</option>
+							<option value="Other">Student</option>
+						</select> 
+						<p> en </p> <input type = "text" placeholder = "Chicago Bulls" class = "simplebox form-control" name="COMPANY" id = "company-input"><p>. Quiero que envíen a mi correo </p><span class = "email-span"><input type = "text" placeholder = "michael.jordan@cbulls.co" class = "simplebox form-control" name="EMAIL" id = "email-input"><span class = "fa fa-exclamation-triangle"></span></span> <p>información sobre: </p>
 					</div>
-					<p>Selecciona al menos dos temas de tu interés.</p>
-					<div class = "tags">
-						<div class = "tag" ng-click = "clickTag($event)">
-							Emprendimientos
-						</div>
-						<div class = "tag" ng-click = "clickTag($event)">
-							Convocatorias
-						</div>
-						<div class = "tag" ng-click = "clickTag($event)">
-							Aceleradoras
-						</div>
-						<div class = "tag" ng-click = "clickTag($event)">
-							Coworking spaces
-						</div>
-						<div class = "tag" ng-click = "clickTag($event)">
-							Inversionistas
-						</div>
-						<div class = "tag" ng-click = "clickTag($event)">
-							Meetups
-						</div>
-						<div class = "tag" ng-click = "clickTag($event)">
-							Blogs
-						</div>
-						<div class = "tag" ng-click = "clickTag($event)">
-							Fundaciones
-						</div>
-						<div class = "tag" ng-click = "clickTag($event)">
-							Gobierno
-						</div>
-						<div class = "tag" ng-click = "clickTag($event)">
-							Crowdfundings
-						</div>
-						<div class = "tag" ng-click = "clickTag($event)">
-							Centros de innovación
-						</div>
+				<!--div class = "input-div">
+					<input type = "text" placeholder = "Tu email" class = "simplebox form-control box-input" name="EMAIL" id = "email-input">
+					<span class = "fa fa-exclamation-triangle"></span>
+				</div-->
+				<div class = "tags">
+					<div class = "tag" ng-click = "clickTag($event)" ng-repeat="tag in alltags.names" tag-name = {{tag}}>
+						{{alltags.labels[$index]}}
 					</div>
-					<div class = "err-div">
-						<span class = "fa fa-exclamation-triangle"></span>
-						<span class = "err-msg">Debes seleccionar al menos dos temas de tu interés</span>
-					</div>
-					<input type = "submit" class = "btn-subscribe form-control simplebox" value = "Suscribirme" name = "subscribe">
-					<span class = "stats">Únete a otras 503 personas suscritas a nuestra lista</span>
-				</form>
+				</div>
+				<div class = "err-div">
+					<span class = "fa fa-exclamation-triangle"></span>
+					<span class = "err-msg">Debes seleccionar al menos dos temas de tu interés</span>
+				</div>
+				<input type = "submit" class = "btn-subscribe form-control simplebox" value = "Suscribirme" name = "subscribe">
+				<span class = "stats">Únete a otras 503 personas suscritas a nuestra lista</span>
+			</form>
 
 		</div>
 
 	</div>
 
+
 	<% include ../partials/body_footer %> 
 </body> 
 </html>
+

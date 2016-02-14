@@ -28,12 +28,115 @@ h1, h2, h3, h4, h5, h6{
 
 }
 
+.video-hero{
+	position: relative;
+
+	a{
+		position: absolute;
+		bottom: 39px;
+		text-shadow: 1px 1px #000000;
+		color: white;
+		font-size: 40px;
+		width: 100%;
+		text-align: center;
+	}	
+
+	a:hover{
+		text-decoration: none;
+	}
+
+	a:focus{
+		text-decoration: none;
+	}
+
+	.hero{
+		position: absolute;
+		padding-left: 45px;
+		padding-right:45px;
+		top: 50%;
+		-ms-transform: translateY(-50%); /* IE 9 */
+		-webkit-transform: translateY(-50%); /* Safari */
+		transform: translateY(-50%);
+		text-align: center;
+		width: 100%;
+		h1{
+			font-size: 55px;
+			    text-shadow: 1px 1px #000000;
+			line-height: 1.4em;
+			margin-bottom: 15px;
+			font-weight: 400;
+			color: white;
+			@include respond-to(handhelds){
+				font-size: 25px;
+			}
+		}
+
+		h4{
+			font-size: 26px;
+			text-shadow: 1px 1px #000000;
+			padding-bottom: 10px;
+			color: white;
+			@include respond-to(handhelds){
+				font-size: 16px;
+				line-height: 25px;
+			}
+		}
+	}
+}
+
+.tagline{
+	margin-top: 20px;
+	background-color: #F3F3F3;
+	padding-bottom: 25px;
+	padding-top: 9px; 
+	width: 100%;
+	text-align: center;
+	img{
+		height: auto;
+		width: 60px;
+	}
+	span{
+		font-size: 15px;
+
+	}
+	span:not(.ph-name){
+		display: block;
+		margin-top: -3px;
+		color: #2B2B2B;
+		padding-right: 20px;
+		padding-left:20px;
+	}
+
+	.phco-img{
+		width: 80px;
+		position: relative;
+		top: -3px;
+
+	}
+
+	.ph-img{
+		width: 52px;
+
+	}
+}
+
+video#bgvid { 
+    position: relative;
+    //min-height: 100%;
+    height: auto;
+    width: 100%;
+    background: url(../img/phco.jpg) no-repeat;
+    background-size: cover; 
+    display: table;
+}
+
 .left{
 	width: 100%;
 	background: $green;
 	display: table;
 	text-align: center;
 	color: white;
+	margin-top: -6px;
 
 	.hero{
 		display: table-cell;
@@ -66,11 +169,9 @@ h1, h2, h3, h4, h5, h6{
 	//padding: 90px;
 	margin:auto;
 	padding-top: 60px;
-	padding-bottom: 60px;
 	
 	@include respond-to(handhelds-and-medium){
 		padding-top: 30px;
-		padding-bottom: 30px;
 		height: initial;
 	}
 
@@ -89,6 +190,7 @@ h1, h2, h3, h4, h5, h6{
 
 	.table{
 		width: 500px;
+		padding-bottom: 40px;	
 		margin: auto;
 		@include respond-to(handhelds-and-medium){
 			width: 90%;
@@ -246,6 +348,11 @@ h1, h2, h3, h4, h5, h6{
 	
 }
 
+.ph-name{
+	color: #d85637;
+	font-weight: 700;
+}
+
 
 //GRACIAS PAGE
 .thanks{
@@ -283,4 +390,31 @@ h1, h2, h3, h4, h5, h6{
 			font-weight: 600;
 		}
 	}
+}
+
+//MEDIA QUERIES
+
+
+
+@media screen and (max-width: 800px) {
+
+	.video-hero{	
+		background: url(../img/phco.jpg) #000 no-repeat center -300px fixed;
+		height: 466px; 
+
+		a{
+			font-size: 30px;
+		}
+
+		.hero h1{
+			font-size: 30px;
+		}
+
+		.hero h4{
+			font-size: 17px;
+		}
+	}
+    #bgvid {
+        display: none !important;
+    }
 }

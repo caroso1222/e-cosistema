@@ -4,17 +4,22 @@
 	<% include ../partials/head %> 
 </head>
 <body class="container-fluid" ng-controller="mainController">
-	<div class = "left">
+
+	<div class = "video-hero">
+		<video autoplay loop poster="src/phco.jpg" id="bgvid">
+			<source src="vid/phco.mp4" type="video/mp4"/>
+		</video>
 		<div class = "hero">
-			<h1>Lo mejor del emprendimiento colombiano</h1>
+			<h1>Lo más destacado del ecosistema Startup en Colombia</h1>
 			<h4>En tu bandeja de entrada. Una vez a la semana.</h4>
 		</div>
+		<a href = "#suscribe-form" class = "fa fa-angle-down" id = "go-down"></a>
 	</div>
-	<div class = "right">
+	<div class = "right" id = "suscribe-form">
 		<div class = "table">
 			<form action="//paramolabs.us2.list-manage1.com/subscribe?u=90fc1ff079c073e775d40165c&id=635523ecb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 				<div class = "natural-form">
-					<p>Me llamo</p> <input type = "text" placeholder = "Michael Jordan" class = "simplebox form-control" name="NAME" id = "name-input"><p>. Actualmente me desempeño como </p>
+					<p>Me llamo</p> <input type = "text" placeholder = "Mark Zuckerberg" class = "simplebox form-control" name="NAME" id = "name-input"><p>. Actualmente me desempeño como </p>
 						<select>
 							<option value="Founder">Founder</option>
 							<option value="Developer">Developer</option>
@@ -25,7 +30,7 @@
 							<option value="Investor">Investor</option>
 							<option value="Other">Student</option>
 						</select> 
-						<p> en </p> <input type = "text" placeholder = "Chicago Bulls" class = "simplebox form-control" name="COMPANY" id = "company-input"><p>. Quiero que envíen a mi correo </p><span class = "email-span"><input type = "text" placeholder = "michael.jordan@cbulls.co" class = "simplebox form-control" name="EMAIL" id = "email-input"><span class = "fa fa-exclamation-triangle"></span></span> <p>información sobre: </p>
+						<p> en </p> <input type = "text" placeholder = "Facebook" class = "simplebox form-control" name="COMPANY" id = "company-input"><p>. Quiero que envíen a mi correo </p><span class = "email-span"><input type = "text" placeholder = "mark@facebook.com" class = "simplebox form-control" name="EMAIL" id = "email-input"><span class = "fa fa-exclamation-triangle"></span></span> <p>información sobre: </p>
 					</div>
 				<!--div class = "input-div">
 					<input type = "text" placeholder = "Tu email" class = "simplebox form-control box-input" name="EMAIL" id = "email-input">
@@ -41,9 +46,14 @@
 					<span class = "err-msg">Debes seleccionar al menos dos temas de tu interés</span>
 				</div>
 				<input type = "submit" class = "btn-subscribe form-control simplebox" value = "Suscribirme" name = "subscribe">
-				<span class = "stats">Únete a otras 503 personas suscritas a nuestra lista</span>
+				<span class = "stats">Únete a más de 200 personas suscritas a nuestra lista</span>
 			</form>
 
+		</div>
+
+		<div class = "tagline">
+			<img class = "ph-img" src="img/logo-ph.png"><img class = "phco-img" src="img/logo-phco.png">
+			<span>La comunidad oficial de <span class = "ph-name">Product Hunt</span> en Colombia</span>
 		</div>
 
 	</div>

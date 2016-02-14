@@ -109,3 +109,16 @@ function validateNumberOfTags(){
 $(window).load(function() {
   $('select').niceSelect();
 });
+
+$("#go-down").click(function(event){
+  goToID("suscribe-form",event);
+});
+
+
+function goToID(id,event){
+  event.preventDefault();
+  $('html,body').animate({
+    scrollTop: $("#"+id).offset().top
+  },1500
+  );
+}

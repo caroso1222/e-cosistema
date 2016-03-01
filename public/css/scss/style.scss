@@ -60,11 +60,12 @@ h1, h2, h3, h4, h5, h6{
 		text-align: center;
 		width: 100%;
 		h1{
-			font-size: 55px;
+			font-size: 45px;
 			    text-shadow: 1px 1px #000000;
+			    letter-spacing: -1px;
 			line-height: 1.4em;
 			margin-bottom: 15px;
-			font-weight: 400;
+			font-weight: 600;
 			color: white;
 			@include respond-to(handhelds){
 				font-size: 25px;

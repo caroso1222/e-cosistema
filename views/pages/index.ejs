@@ -17,25 +17,21 @@
 	</div>
 	<div class = "right" id = "suscribe-form">
 		<div class = "table">
-			<form action="//paramolabs.us2.list-manage1.com/subscribe?u=90fc1ff079c073e775d40165c&id=635523ecb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			<form action="//facebook.us2.list-manage.com/subscribe/post?u=90fc1ff079c073e775d40165c&amp;id=635523ecb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 				<div class = "natural-form">
 					<p>Me llamo</p> <input type = "text" placeholder = "Mark Zuckerberg" class = "simplebox form-control" name="NAME" id = "name-input"><p>. Actualmente me desempeño como </p>
-						<select>
-							<option value="Founder">Founder</option>
-							<option value="Developer">Developer</option>
-							<option value="Designer">Designer</option>
-							<option value="Growth Hacker">Growth Hacker</option>
-							<option value="Content Creator">Content Creator</option>
-							<option value="Student">Student</option>
-							<option value="Investor">Investor</option>
-							<option value="Other">Student</option>
+						<select name ="ROLE">
+							<option value="founder">Founder</option>
+							<option value="developer">Developer</option>
+							<option value="designer">Designer</option>
+							<option value="growth hacker">Growth Hacker</option>
+							<option value="content creator">Content Creator</option>
+							<option value="student">Student</option>
+							<option value="investor">Investor</option>
+							<option value="other">Student</option>
 						</select> 
 						<p> en </p> <input type = "text" placeholder = "Facebook" class = "simplebox form-control" name="COMPANY" id = "company-input"><p>. Quiero que envíen a mi correo </p><span class = "email-span"><input type = "text" placeholder = "mark@facebook.com" class = "simplebox form-control" name="EMAIL" id = "email-input"><span class = "fa fa-exclamation-triangle"></span></span> <p>información sobre: </p>
 					</div>
-				<!--div class = "input-div">
-					<input type = "text" placeholder = "Tu email" class = "simplebox form-control box-input" name="EMAIL" id = "email-input">
-					<span class = "fa fa-exclamation-triangle"></span>
-				</div-->
 				<div class = "tags">
 					<div class = "tag" ng-click = "clickTag($event)" ng-repeat="tag in alltags.names" tag-name = {{tag}}>
 						{{alltags.labels[$index]}}

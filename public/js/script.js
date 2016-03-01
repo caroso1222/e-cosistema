@@ -10,7 +10,7 @@ newsletterapp
 	//Adds fields to url to post to mailchimp
 	var oldurl = $("#mc-embedded-subscribe-form").attr('action');
 	for(i = 0; i< $scope.alltags.names.length; i++){
-		oldurl = oldurl + "&"+$scope.alltags.names[i] + "=No";
+		oldurl = oldurl + "&"+$scope.alltags.names[i] + "=no";
 	}
 	$("#mc-embedded-subscribe-form").attr('action',oldurl);
 
@@ -22,27 +22,25 @@ newsletterapp
 			$scope.tags = jQuery.grep($scope.tags, function(value){ //Removes tag from array
 				return value != tag.text().trim();
 			});
-			updateUrl(tag.attr('tag-name'),"No"); //Puts 'no' to tag in form url
+			updateUrl(tag.attr('tag-name'),"no"); //Puts 'no' to tag in form url
 		}else{
 			tag.addClass("active");
 			$scope.tags.push(tag.text().trim()); //Adds tag to array
 			if($scope.tags.length>1){
 				$(".err-div").css("display","none"); //Hides error message if number of tags selected is greater than 2
 			};
-			updateUrl(tag.attr('tag-name'),"Si"); //Puts 'no' to tag in form url
+			updateUrl(tag.attr('tag-name'),"si"); //Puts 'no' to tag in form url
 		}
-		//console.log($scope.tags);
 	}
 
 	function updateUrl(changed,action){ //action = No, action = Si
-		console.log(changed);
 		var url = $("#mc-embedded-subscribe-form").attr('action');
 		var urlparts = url.split(changed);
 		urlparts[1] = urlparts[1].replaceAt(1,action.charAt(0)); //Change Si for No, or viceversa
 		urlparts[1] = urlparts[1].replaceAt(2,action.charAt(1));
 		url = urlparts[0]+changed+urlparts[1];
 		$("#mc-embedded-subscribe-form").attr('action',url);
-		console.log(url);
+		//console.log(url);
 	}
 
 	String.prototype.replaceAt=function(index, character) { //Function that replaces character in string
@@ -59,7 +57,6 @@ $(function() {
 
 	$('#mc-embedded-subscribe-form').submit(function() {
         // DO STUFF
-        console.log("submit");
         var correctForm = true;
 
         if(!validateNumberOfTags()){
@@ -69,6 +66,31 @@ $(function() {
 
         if(!validateSubscribeEmail()){
         	correctForm = correctForm&&false;
+        }
+
+        if(correctForm){
+        	var data = {};
+        	data.email = $("#email-input").val();
+        	$.ajax({
+        		url: "/invite",
+        		type: "POST",
+        		dataType: "json",
+        		data: JSON.stringify(data),
+        		contentType: "application/json",
+        		cache: false,
+        		timeout: 5000,
+        		complete: function() {
+        			console.log('complete');
+        		},
+
+        		success: function(data) {
+        			console.log('success');
+        		},
+
+        		error: function() {
+        			console.log('error');
+        		},
+        	});
         }
         
         return correctForm; // return false to cancel form action
@@ -107,18 +129,18 @@ function validateNumberOfTags(){
 }
 
 $(window).load(function() {
-  $('select').niceSelect();
+	$('select').niceSelect();
 });
 
 $("#go-down").click(function(event){
-  goToID("suscribe-form",event);
+	goToID("suscribe-form",event);
 });
 
 
 function goToID(id,event){
-  event.preventDefault();
-  $('html,body').animate({
-    scrollTop: $("#"+id).offset().top
-  },1500
-  );
+	event.preventDefault();
+	$('html,body').animate({
+		scrollTop: $("#"+id).offset().top
+	},1500
+	);
 }
